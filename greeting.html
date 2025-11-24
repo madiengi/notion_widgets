@@ -157,7 +157,7 @@ else{
 }
 hrs = today.getHours();
 const card = document.getElementById('card');
-if (hrs < 12) {
+if (hrs < 12 && hrs > 4) {
         greet = 'Good Morning  '; 
         card.classList.remove('card-afternoon');
         card.classList.remove('card-evening');
@@ -167,7 +167,7 @@ if (hrs < 12) {
         card.classList.remove('card-morning');
         card.classList.remove('card-evening');
         card.classList.add('card-afternoon'); }
-    else if (hrs >= 17 && hrs <= 24) {
+    else{
         greet = 'Good Evening  ';
         card.classList.remove('card-afternoon');
         card.classList.remove('card-morning');
@@ -208,4 +208,5 @@ dateTime()
 </script>
 
 </body>
+
 </html>
